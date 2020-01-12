@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{asiakkaat.id}}">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Päivitä tiedot</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Asiakasnumero:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="asiakasnro" id="id_asiakasnro" required maxlength="20" value="{{ asiakkaat.asiakasnro }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Sukunimi:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="sukunimi" id="id_sukunimi" required maxlength="100" value="{{ asiakkaat.sukunimi }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Etunimi:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="etunimi" id="id_etunimi" required maxlength="254" value="{{ asiakkaat.etunimi }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Katuosoite:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="katuosoite" id="id_katuosoite" required maxlength="100" value="{{ asiakkaat.katuosoite }}" />  
+    </div>  
+  </div>
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Postinumero:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="postinumero" id="id_postinumero" required maxlength="5" value="{{ asiakkaat.postinumero }}" />  
+    </div>  
+  </div>
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Postitoimipaikka:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="postitmp" id="id_postitmp" required maxlength="100" value="{{ asiakkaat.postitmp }}" />  
+    </div>  
+  </div>    
+        <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Puhelinnumero:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="puh" id="id_puh" required maxlength="100" value="{{ asiakkaat.puh }}" />  
+    </div>  
+  </div> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  

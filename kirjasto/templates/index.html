@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/emp">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Syötä asiakkaan tiedot</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Kirjastokortin numero (asiakasnumero):</label>  
+    <div class="col-sm-4">  
+      {{ form.asiakasnro }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Etunimi:</label>  
+    <div class="col-sm-4">  
+      {{ form.etunimi }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Sukunimi:</label>  
+    <div class="col-sm-4">  
+      {{ form.sukunimi }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Katuosoite:</label>  
+    <div class="col-sm-4">  
+      {{ form.katuosoite }}  
+    </div>  
+  </div>
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Postinumero:</label>  
+    <div class="col-sm-4">  
+      {{ form.postinumero }}  
+    </div>  
+  </div>    
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Postitoimipaikka:</label>  
+    <div class="col-sm-4">  
+      {{ form.postitmp }}  
+    </div>  
+  </div>  
+      <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Puhelinnumero:</label>  
+    <div class="col-sm-4">  
+      {{ form.puh }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Lisää</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
